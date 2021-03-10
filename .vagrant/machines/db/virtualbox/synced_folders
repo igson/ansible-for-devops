@@ -1,1 +1,1 @@
-{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/home/ims/Documentos/treinamento/test-project","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/home/ims/Documentos/treinamento/ansible-for-devops","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}

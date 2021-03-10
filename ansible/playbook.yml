@@ -1,0 +1,11 @@
+---
+- hosts: all
+  #vars_files:
+   # - vars.yml
+
+  tasks:
+    - debug:
+        msg: "Variable to 'grupo' is set to {{ grupo }}"
+    - debug:
+        msg: "{{ ansible_all_ipv4_addresses }}"
+    
