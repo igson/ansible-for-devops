@@ -20,7 +20,8 @@ Vagrant.configure("2") do |config|
         vb.memory = conf["memory"]
         vb.cpus = conf["cpu"]
       end
-      machine.vm.provision "shell", inline: "apt install python3 -y"
+      machine.vm.provision "shell", inline: "sudo apt install python3 -y"
+      machine.vm.provision "shell", inline: "sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1"
       machine.vm.provision "shell", inline: "echo '#{name}.4labs.example' > /etc/hostname"
       machine.vm.provision "shell", inline: "hostnamectl set-hostname #{name}.4labs.example"
     end

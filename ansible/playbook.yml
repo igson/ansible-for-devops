@@ -6,6 +6,17 @@
   tasks:
     - debug:
         msg: "Variable to 'grupo' is set to {{ grupo }}"
-    - debug:
-        msg: "{{ ansible_all_ipv4_addresses }}"
-    
+   
+   # - debug:
+   #     msg: "{{ ansible_all_ipv4_addresses }}"
+   
+    - name: Fetch Java version
+      shell: java -version         
+      failed_when: False                                                                                                                 
+      register: java_result
+
+    - name: Exibindo versão do java
+      debug:
+        #msg: "{{ java_result.stderr }}"
+        msg: "Java não encontrado"
+      when: "'java: not found' in java_result.stderr"
